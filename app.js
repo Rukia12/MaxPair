@@ -22,7 +22,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 function multiply(x,y) {
   var product = x * y;
-  return [product, 'The product of ' + x + 'and ' + y + 'is' + product]
+  return [product, 'The product of ' + x + 'and ' + y + ' is ' + product]
 }
 
 // Here is the test for multiply(); uncomment it to run it
