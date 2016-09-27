@@ -12,7 +12,7 @@ function sum(x,y){
   var sum = x + y;
   return [sum,'The sum of' + ' ' + x + ' ' + 'and' + ' ' + y + ' ' + 'is' + ' ' + sum + '.'];
 }
-sum(4,7);
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -32,6 +32,7 @@ function multiply(x,y){
   var product = x * y;
   return [product,'The product of ' + x + ' and ' + y + ' is ' + product + '.'];
 }
+testMultiply (4,7);
 console.log(testMultiply(4,7));
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
@@ -51,7 +52,12 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(x,y,z) {
   var sum = x + y + z;
   var product = x * y * z;
-  return [sum,product,x + ' and ' + y + ' and ' + z + ' sum to ' + sum + '.' , 'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + product + '.'];
+  return [
+    sum,
+    product,
+    x + ' and ' + y + ' and ' + z + ' sum to ' + sum + '.' , 
+    'The product of ' + x + ' and ' + y + ' and ' + z + ' is ' + product + '.'
+  ];
 }
 sumAndMultiply(4,7,5);
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -78,7 +84,7 @@ function sumArray(myArray) {
   return [total, myArray + ' was passed in as an array of numbers, and ' + total + ' is their sum.'];
 }
 
-testArray = [2,3,4];
+var testArray = [2,3,4];
 
 // Here is the test for sumArray(); uncomment it to run it
 testSumArray(testArray);
@@ -94,17 +100,16 @@ and returns an array whose first element is the product of those numbers,
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here.
-function multiplyArray(testArray) {
+function multiplyArray(myArray) {
 // calculate total
   var total = 1;
-  for (var i = 0; i < testArray.length; i++) {
-    total = total * testArray[i];
+  for (var i = 0; i < myArray.length; i++) {
+    total = total * myArray[i];
   }
-  return [total,'The numbers' + ' ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' ' + 'have a product of ' + total + '.'];
+  return [total,'The numbers' + ' ' + myArray[0] + ',' + myArray[1] + ',' + myArray[2] + ' ' + 'have a product of ' + total + '.'];
 }
 
-testArray = [2,3,4];
-multiplyArray(testArray);
+var testArray = [2,3,4];
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
